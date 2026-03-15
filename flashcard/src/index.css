@@ -1,0 +1,3 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; }
+button:disabled { opacity: 0.3; cursor: not-allowed; }

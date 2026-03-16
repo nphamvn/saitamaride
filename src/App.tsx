@@ -51,12 +51,27 @@ async function fetchImageAsBase64(url: string): Promise<string> {
   });
 }
 
-async function callClaude(apiKey: string, imageBase64: string, side: 'question' | 'answer'): Promise<string> {
-  const prompt =
-    side === 'question'
-      ? 'This is a Japanese motorcycle license exam question image. Translate all Japanese text to English and explain what the question is asking.'
-      : 'This is the answer to a Japanese motorcycle license exam question. Translate all Japanese text to English and explain what the answer means.';
+type Provider = 'anthropic' | 'gemini';
 
+const PROVIDERS: { id: Provider; label: string; placeholder: string }[] = [
+  { id: 'anthropic', label: 'Claude (Anthropic)', placeholder: 'sk-ant-...' },
+  { id: 'gemini',    label: 'Gemini (Google)',    placeholder: 'AIza...' },
+];
+
+function getStoredProvider(): Provider {
+  return (localStorage.getItem('ai_provider') as Provider) ?? 'anthropic';
+}
+
+function getStoredApiKey(provider: Provider): string {
+  return localStorage.getItem(`api_key_${provider}`) ?? '';
+}
+
+const EXPLAIN_PROMPT = (side: 'question' | 'answer') =>
+  side === 'question'
+    ? 'This is a Japanese motorcycle license exam question image. Translate all Japanese text to English and explain what the question is asking.'
+    : 'This is the answer to a Japanese motorcycle license exam question. Translate all Japanese text to English and explain what the answer means.';
+
+async function callClaude(apiKey: string, imageBase64: string, side: 'question' | 'answer'): Promise<string> {
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
@@ -68,18 +83,13 @@ async function callClaude(apiKey: string, imageBase64: string, side: 'question' 
     body: JSON.stringify({
       model: 'claude-sonnet-4-6',
       max_tokens: 1024,
-      messages: [
-        {
-          role: 'user',
-          content: [
-            {
-              type: 'image',
-              source: { type: 'base64', media_type: 'image/png', data: imageBase64 },
-            },
-            { type: 'text', text: prompt },
-          ],
-        },
-      ],
+      messages: [{
+        role: 'user',
+        content: [
+          { type: 'image', source: { type: 'base64', media_type: 'image/png', data: imageBase64 } },
+          { type: 'text', text: EXPLAIN_PROMPT(side) },
+        ],
+      }],
     }),
   });
 
@@ -92,33 +102,96 @@ async function callClaude(apiKey: string, imageBase64: string, side: 'question' 
   return data.content.find(b => b.type === 'text')?.text ?? '';
 }
 
-// ── API Key Modal ─────────────────────────────────────────────────────────────
+async function callGemini(apiKey: string, imageBase64: string, side: 'question' | 'answer'): Promise<string> {
+  const res = await fetch(
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+    {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        contents: [{
+          parts: [
+            { inline_data: { mime_type: 'image/png', data: imageBase64 } },
+            { text: EXPLAIN_PROMPT(side) },
+          ],
+        }],
+      }),
+    }
+  );
+
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(
+      (err as { error?: { message?: string } }).error?.message ?? `API error ${res.status}`
+    );
+  }
+
+  const data = await res.json() as { candidates?: { content?: { parts?: { text?: string }[] } }[] };
+  return data.candidates?.[0]?.content?.parts?.find(p => p.text)?.text ?? '';
+}
+
+async function callAI(provider: Provider, apiKey: string, imageBase64: string, side: 'question' | 'answer'): Promise<string> {
+  return provider === 'gemini'
+    ? callGemini(apiKey, imageBase64, side)
+    : callClaude(apiKey, imageBase64, side);
+}
+
+// ── AI Settings Modal ─────────────────────────────────────────────────────────
 function ApiKeyModal({ onClose }: { onClose: () => void }) {
-  const [val, setVal] = useState(() => localStorage.getItem('anthropic_api_key') ?? '');
+  const [provider, setProvider] = useState<Provider>(getStoredProvider);
+  const [keys, setKeys] = useState<Record<Provider, string>>({
+    anthropic: getStoredApiKey('anthropic'),
+    gemini: getStoredApiKey('gemini'),
+  });
 
   const save = () => {
-    const trimmed = val.trim();
-    if (trimmed) localStorage.setItem('anthropic_api_key', trimmed);
-    else localStorage.removeItem('anthropic_api_key');
+    localStorage.setItem('ai_provider', provider);
+    for (const p of PROVIDERS) {
+      const trimmed = keys[p.id].trim();
+      if (trimmed) localStorage.setItem(`api_key_${p.id}`, trimmed);
+      else localStorage.removeItem(`api_key_${p.id}`);
+    }
     onClose();
   };
+
+  const current = PROVIDERS.find(p => p.id === provider)!;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
       <div className="w-full max-w-md rounded-2xl bg-slate-900 border border-slate-700 p-6 shadow-2xl">
-        <h2 className="text-lg font-bold text-white mb-1">Anthropic API Key</h2>
+        <h2 className="text-lg font-bold text-white mb-1">AI Settings</h2>
         <p className="text-sm text-slate-400 mb-4">
-          Required for the Translate &amp; Explain feature. Stored in your browser's localStorage.
+          Choose a provider and enter its API key. Keys are stored in your browser's localStorage.
         </p>
+
+        {/* Provider tabs */}
+        <div className="flex gap-2 mb-4">
+          {PROVIDERS.map(p => (
+            <button
+              key={p.id}
+              onClick={() => setProvider(p.id)}
+              className={`flex-1 py-2 rounded-lg text-sm font-semibold transition-colors cursor-pointer border ${
+                provider === p.id
+                  ? 'bg-indigo-600 border-indigo-500 text-white'
+                  : 'bg-slate-800 border-slate-700 text-slate-400 hover:text-white'
+              }`}
+            >
+              {p.label}
+            </button>
+          ))}
+        </div>
+
         <input
+          key={provider}
           type="password"
-          value={val}
-          onChange={e => setVal(e.target.value)}
+          value={keys[provider]}
+          onChange={e => setKeys(k => ({ ...k, [provider]: e.target.value }))}
           onKeyDown={e => e.key === 'Enter' && save()}
-          placeholder="sk-ant-..."
+          placeholder={current.placeholder}
           className="w-full rounded-lg bg-slate-800 border border-slate-600 text-white placeholder-slate-500 px-3 py-2 text-sm outline-none focus:border-indigo-500 font-mono mb-4"
           autoFocus
         />
+
         <div className="flex gap-2 justify-end">
           <button
             onClick={onClose}
@@ -187,7 +260,8 @@ export default function App() {
   const reset = () => { setMode(null); setSelectedTest(null); };
 
   const handleExplain = async () => {
-    const apiKey = localStorage.getItem('anthropic_api_key');
+    const provider = getStoredProvider();
+    const apiKey = getStoredApiKey(provider);
     if (!apiKey) {
       setShowApiKeyModal(true);
       return;
@@ -201,7 +275,7 @@ export default function App() {
       const card = deck[index];
       const side = flipped ? 'answer' : 'question';
       const base64 = await fetchImageAsBase64(imgPath(card.test, card.no, side));
-      const result = await callClaude(apiKey, base64, side);
+      const result = await callAI(provider, apiKey, base64, side);
       setExplanation(result);
       setTimeout(() => explainRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
     } catch (e) {
@@ -271,7 +345,7 @@ export default function App() {
             className="flex items-center gap-2 text-xs text-slate-500 hover:text-slate-300 transition-colors cursor-pointer"
           >
             <span>⚙</span>
-            <span>{localStorage.getItem('anthropic_api_key') ? 'Update API Key' : 'Set API Key for AI Explain'}</span>
+            <span>AI Settings</span>
           </button>
         </div>
       </>

@@ -1,0 +1,252 @@
+{
+  "1": {
+    "question": "Đối với ô tô thường có tổng dung tích xi-lanh từ 660cc trở xuống, khi chạy trên làn chính của đường cao tốc quốc gia có dải phân cách ở giữa, tốc độ tối đa theo luật là 80 km/h.",
+    "answer": "Sai (×). Tốc độ tối đa của ô tô thường là 100 km/h. Xe mô tô hai bánh, xe tải thường, xe ô tô hạng trung và xe khách cỡ lớn cũng cơ bản là 100 km/h.",
+    "explanation": "Câu này sai vì trên đường cao tốc có dải phân cách trung tâm, ô tô thường, kể cả xe kei 660cc, được phép chạy tối đa 100 km/h. Mốc 80 km/h chỉ áp dụng cho một số loại xe nhất định, không phải cho ô tô thường dưới 660cc."
+  },
+  "2": {
+    "question": "Độ căng của quạt gió dây curoa là phù hợp nếu dùng tay ấn vào phần giữa của dây và thấy nó chùng xuống một chút.",
+    "answer": "Đúng (○). Dây curoa quạt gió được xem là đạt yêu cầu khi ấn vào phần giữa và thấy nó võng xuống nhẹ.",
+    "explanation": "Khi kiểm tra dây curoa, không được quá chùng cũng không được quá căng. Nếu ấn phần giữa của dây mà nó chỉ lún xuống một ít thì đó là trạng thái phù hợp để vận hành."
+  },
+  "3": {
+    "question": "Biển báo này cấm xe tải lớn, xe tải hạng trung đặc biệt và xe đặc chủng cỡ lớn đi qua.",
+    "answer": "Đúng (○). Đây là biển cấm các loại xe tải lớn, xe tải hạng trung đặc biệt và xe đặc chủng cỡ lớn lưu thông.",
+    "explanation": "Biển trong hình là biển cấm các loại xe tải lớn đi vào. Vì vậy nội dung mô tả ý nghĩa của biển là chính xác."
+  },
+  "4": {
+    "question": "Dù khi đỗ xe bên phải xe không còn khoảng trống 3,5 mét trở lên trên phần đường, nhưng vì ít xe qua lại và tôi cho rằng không cản trở giao thông nên đã đỗ xe.",
+    "answer": "Sai (×). Không được đỗ xe ở nơi mà bên phải xe không còn khoảng trống từ 3,5 mét trở lên.",
+    "explanation": "Khi đỗ xe trên đường, phải chừa bên phải xe một khoảng trống đủ rộng, tối thiểu 3,5 mét, để phương tiện khác đi qua. Không thể lấy lý do ít xe qua lại hay tự đánh giá là không cản trở để bỏ qua quy định này."
+  },
+  "5": {
+    "question": "Tại giao lộ có biển báo và đèn tín hiệu như hình này, xe gắn máy dưới 50cc muốn rẽ phải phải tuân theo tín hiệu đèn và rẽ phải theo cách giống ô tô, tức rẽ gọn (không rẽ phải hai giai đoạn).",
+    "answer": "Đúng (○). Phải làm theo biển báo 'rẽ gọn, cấm rẽ phải hai giai đoạn' và rẽ phải theo cách giống ô tô.",
+    "explanation": "Thông thường xe gắn máy nhỏ có thể phải rẽ phải hai giai đoạn ở giao lộ lớn, nhưng nếu có biển chỉ dẫn yêu cầu 'rẽ gọn' thì phải làm theo biển đó. Vì vậy trong trường hợp này xe phải rẽ phải như ô tô, không được rẽ hai giai đoạn."
+  },
+  "6": {
+    "question": "Xe A đang đỗ ở vị trí này là vi phạm quy định cấm đỗ xe.",
+    "answer": "Sai (×). Mũi tên chỉ hướng là điểm bắt đầu hiệu lực; từ vị trí biển báo trở đi mới là khu vực cấm đỗ, nên xe A không vi phạm.",
+    "explanation": "Biển cấm đỗ kèm mũi tên chỉ sang phải có nghĩa là lệnh cấm bắt đầu có hiệu lực từ vị trí biển và áp dụng về phía bên phải mũi tên chỉ. Xe A nằm trước điểm bắt đầu hiệu lực nên chưa thuộc khu vực cấm đỗ."
+  },
+  "7": {
+    "question": "Trên đường thường không có biển chỉ định tốc độ tối đa, khi xe tải lớn vượt xe thì tốc độ tối đa được phép là 60 km/h.",
+    "answer": "Đúng (○). Trên đường thường không có biển chỉ định tốc độ tối đa, xe tải lớn được chạy tối đa 60 km/h.",
+    "explanation": "Ở đường thông thường không có quy định tốc độ riêng bằng biển báo, tốc độ tối đa phụ thuộc vào loại xe. Với xe tải lớn, tốc độ tối đa là 60 km/h, nên dù đang vượt xe cũng không được vượt quá mức đó."
+  },
+  "8": {
+    "question": "Khi lái xe số tự động, nếu đạp chắc bàn đạp phanh, kiểm tra bằng mắt vị trí cần số rồi khởi hành mà cần số đang ở vị trí 'D' hoặc 'R', thì nên nhả phanh ra, cho xe chạy từ từ và đạp bàn đạp ga một cách nhẹ nhàng.",
+    "answer": "Đúng (○). Đây là cách thao tác khởi hành đúng đối với xe số tự động.",
+    "explanation": "Khi khởi hành xe số tự động, trước hết cần giữ phanh, xác nhận đúng vị trí cần số, sau đó nhả phanh để xe bắt đầu chuyển động rồi mới tăng ga nhẹ nhàng. Thao tác này giúp xe khởi hành ổn định và an toàn."
+  },
+  "9": {
+    "question": "Khi định rẽ trái vì phải đi ra đường bên cạnh, ngay trước khi rẽ cần ép sát vào bên trái của đường.",
+    "answer": "Sai (×). Không phải chỉ ngay trước lúc rẽ, mà phải chủ động dần dần đi sát mép trái từ trước đó càng sớm càng tốt.",
+    "explanation": "Khi rẽ trái, người lái cần giảm tốc và chuyển dần sang sát bên trái trước khi tới điểm rẽ. Nếu chỉ đến ngay trước lúc rẽ mới ép vào bên trái thì dễ gây nguy hiểm và không đúng thao tác chuẩn."
+  },
+  "10": {
+    "question": "Khi lái ô tô, không được nghiêng người lệch sang một bên hoặc gác khuỷu tay lên khung cửa sổ khi điều khiển xe.",
+    "answer": "Đúng (○). Khi lái xe không nên nghiêng người hoặc đặt khuỷu tay lên khung cửa sổ.",
+    "explanation": "Tư thế lái xe phải ổn định để dễ thao tác vô lăng và phản ứng nhanh khi có tình huống bất ngờ. Nghiêng người hoặc gác khuỷu tay lên cửa sổ làm giảm khả năng điều khiển xe an toàn."
+  },
+  "11": {
+    "question": "Biển này chỉ 'có xe nhập làn'.",
+    "answer": "Đúng (○).",
+    "explanation": "Đây là biển cảnh báo có giao thông nhập làn."
+  },
+  "12": {
+    "question": "Nếu chở hàng không thể chia nhỏ và dài vượt quá 1,2 lần chiều dài xe như hình, phải xin phép trưởng đồn cảnh sát.",
+    "answer": "Đúng (○).",
+    "explanation": "Vượt giới hạn kích thước chở hàng thì cần xin phép."
+  },
+  "13": {
+    "question": "Xe đặc biệt loại nhỏ đối diện tín hiệu này không được đi theo hướng mũi tên xanh.",
+    "answer": "Sai (×).",
+    "explanation": "Ô tô có thể đi theo mũi tên; chỉ một số xe nhỏ, xe máy trong trường hợp nhất định mới không được."
+  },
+  "14": {
+    "question": "Giấy phép lái xe được chia thành 3 loại: hạng 1, hạng 2 và bằng xe gắn máy.",
+    "answer": "Sai (×).",
+    "explanation": "Không phải bằng xe gắn máy mà là bằng lái tạm thời."
+  },
+  "15": {
+    "question": "Ở đoạn đường có biển này, dù để vượt xe cũng không được đi sang phần bên phải tính từ giữa đường.",
+    "answer": "Đúng (○).",
+    "explanation": "Đây là biển cấm lấn sang phần bên phải để vượt."
+  },
+  "16": {
+    "question": "Tem kiểm định bên trái cho biết thời điểm kiểm định xe tiếp theo (năm, tháng).",
+    "answer": "Đúng (○).",
+    "explanation": "Tem kiểm định thể hiện kỳ hạn kiểm định tiếp theo."
+  },
+  "17": {
+    "question": "Trong phạm vi 3 mét tính từ lối ra vào chuyên dùng cho ô tô như bãi đỗ hay garage, không được đỗ cũng không được dừng.",
+    "answer": "Sai (×).",
+    "explanation": "Chỉ cấm đỗ xe, không cấm dừng xe."
+  },
+  "18": {
+    "question": "Đường có biển này nghĩa là xe không phải ô tô thường không được đi.",
+    "answer": "Sai (×).",
+    "explanation": "Đây là biển 'đường dành riêng cho ô tô', dùng cho cao tốc hoặc đường chuyên dùng cho ô tô."
+  },
+  "19": {
+    "question": "Để xe máy chạy ổn định, nên chỉnh tay lái nặng và xích thật căng.",
+    "answer": "Sai (×).",
+    "explanation": "Tay lái không được nặng; xích không quá chùng cũng không quá căng."
+  },
+  "20": {
+    "question": "Khi tính số người theo định viên có bao gồm lái xe, trẻ em dưới 12 tuổi thì 3 người tính thành 2 người.",
+    "answer": "Sai (×).",
+    "explanation": "Định viên có tính cả lái xe; trẻ dưới 12 tuổi cứ 3 người tính thành 2 người."
+  },
+  "21": {
+    "question": "Ban ngày, trong hầm hoặc sương mù dày đến mức không nhìn thấy phía trước 100m (cao tốc 300m), phải bật đèn.",
+    "answer": "Sai (×).",
+    "explanation": "Mốc đúng là 50m, trên cao tốc là 200m."
+  },
+  "22": {
+    "question": "Ban ngày, nếu xe hỏng hoặc hết xăng và phải dừng trên đường thường, nên mở cốp hoặc capo để người khác dễ nhận ra xe đang hỏng.",
+    "answer": "Đúng (○).",
+    "explanation": "Cần làm cho tình trạng xe hỏng dễ được nhận biết."
+  },
+  "23": {
+    "question": "Các biển này nghĩa là A là 'đường một chiều', B là 'được rẽ trái'.",
+    "answer": "Đúng (○).",
+    "explanation": "A chỉ đường một chiều, B cho phép rẽ trái."
+  },
+  "24": {
+    "question": "Khi xảy ra tai nạn, dù cảnh sát chưa tới, vẫn có thể chuyển xe đến nơi an toàn để tránh tai nạn tiếp diễn và cản trở giao thông.",
+    "answer": "Đúng (○).",
+    "explanation": "Có thể di chuyển xe để ngăn tai nạn tiếp theo và tránh cản trở."
+  },
+  "25": {
+    "question": "Khi mặt đường ướt và lốp mòn, quãng đường dừng có thể tăng khoảng gấp đôi so với đường khô và lốp tốt.",
+    "answer": "Đúng (○).",
+    "explanation": "Đường ướt làm quãng đường dừng tăng nhiều, khoảng gấp đôi."
+  },
+  "26": {
+    "question": "Lái xe buýt cỡ lớn dùng cho gia đình thì cần bằng lái hạng hai cỡ lớn.",
+    "answer": "Sai (×).",
+    "explanation": "Chỉ cần bằng hạng hai khi chở khách để kinh doanh vận tải."
+  },
+  "27": {
+    "question": "Khi đi xe hai bánh trên đường bùn hoặc sỏi, nên thay đổi tốc độ bằng ga để giữ thăng bằng.",
+    "answer": "Sai (×).",
+    "explanation": "Nên dùng số thấp và giữ ga ổn định."
+  },
+  "28": {
+    "question": "Khi bị xe khác vượt, nếu họ không đủ khoảng trống để vượt thì phải ép trái hết mức và nhường đường.",
+    "answer": "Đúng (○).",
+    "explanation": "Cần đi sát trái trong khả năng có thể và nhường đường."
+  },
+  "29": {
+    "question": "Khi lái ô tô phải mang theo giấy kiểm định, nhưng không bắt buộc mang chứng nhận bảo hiểm trách nhiệm dân sự bắt buộc.",
+    "answer": "Sai (×).",
+    "explanation": "Phải mang theo cả giấy bảo hiểm bắt buộc."
+  },
+  "30": {
+    "question": "Nếu cảnh sát đang điều khiển giao thông bằng tay mà hiệu lệnh tay khác với đèn tín hiệu thì đèn tín hiệu được ưu tiên.",
+    "answer": "Sai (×).",
+    "explanation": "Phải ưu tiên theo hiệu lệnh của cảnh sát."
+  },
+  "31": {
+    "question": "Ngay cả trên đường một chiều, khi có thể chạy lấn sang phần bên phải tính từ giữa đường, cũng phải cố gắng giảm mức lấn ra đó đến mức ít nhất có thể.",
+    "answer": "Đúng (○).",
+    "explanation": "Đường một chiều có thể lấn phải, nhưng không được lấn quá nhiều."
+  },
+  "32": {
+    "question": "Trong phạm vi 1 mét từ thiết bị báo cháy, không được đỗ xe để chờ khách, nhưng có thể dừng xe để khách lên xuống.",
+    "answer": "Đúng (○).",
+    "explanation": "Trong phạm vi này cấm đỗ xe; dừng xe cho khách lên xuống thì được."
+  },
+  "33": {
+    "question": "Khi xe hai bánh đi trên đường bùn hoặc đường sỏi, nên kẹp bình xăng bằng hai đầu gối, và tùy tình trạng mặt đường có thể đi trong tư thế đứng để giữ thăng bằng.",
+    "answer": "Đúng (○).",
+    "explanation": "Đây là cách giữ thăng bằng khi đi trên đường xấu."
+  },
+  "34": {
+    "question": "Phanh động cơ của xe hai bánh sẽ lớn hơn và có thể dừng an toàn hơn nếu chuyển một lần từ số cao xuống số thấp.",
+    "answer": "Sai (×).",
+    "explanation": "Phải về số tuần tự; về một lần dễ hỏng máy hoặc ngã."
+  },
+  "35": {
+    "question": "Khi phanh xe hai bánh, nên cắt côn trước rồi đồng thời bóp phanh trước và sau.",
+    "answer": "Sai (×).",
+    "explanation": "Phanh trước, gần dừng hẳn mới cắt côn; phanh dùng cả trước và sau."
+  },
+  "36": {
+    "question": "Người có bằng lái đặc biệt hạng lớn có thể lái xe đặc biệt cỡ nhỏ và ô tô cỡ lớn.",
+    "answer": "Sai (×).",
+    "explanation": "Bằng này lái được xe đặc biệt lớn, đặc biệt nhỏ và xe máy nhỏ đặc định; không lái được ô tô lớn."
+  },
+  "37": {
+    "question": "Biển phụ này là biển cho biết có thiết bị phát hành vé đỗ xe.",
+    "answer": "Đúng (○).",
+    "explanation": "Biển chỉ có máy phát vé đỗ xe."
+  },
+  "38": {
+    "question": "Nơi có biển này cho biết do phía trước đang thi công đường nên xe không thể đi qua.",
+    "answer": "Sai (×).",
+    "explanation": "Đây là biển cảnh báo 'đang thi công đường'; vẫn có thể đi qua."
+  },
+  "39": {
+    "question": "Nếu người gặp khó khăn khi đi bộ không thể lái tiếp trên đường cao tốc do xe hỏng v.v., có thể đặt vật báo hiệu dừng xe ở lề đường phía bên xe, nơi dễ thấy từ phía sau.",
+    "answer": "Đúng (○).",
+    "explanation": "Người đi lại khó khăn được phép đặt ở phía bên xe."
+  },
+  "40": {
+    "question": "Trên đường cao tốc không được dừng đỗ xe, nhưng nếu để phòng ngừa nguy hiểm hoặc trong trường hợp bất đắc dĩ thì có thể tạm dừng.",
+    "answer": "Đúng (○).",
+    "explanation": "Để tránh nguy hiểm thì được tạm dừng."
+  },
+  "41": {
+    "question": "Khi lái xe tải lớn hoặc xe tải hạng trung đặc định, trước khi khởi hành phải dùng búa kiểm tra v.v. để kiểm tra các bất thường như đai ốc bánh xe bị rơi hoặc lỏng, bu lông bánh xe bị hư hỏng.",
+    "answer": "Đúng (○).",
+    "explanation": "Xe đối tượng này phải kiểm tra bánh, đĩa bằng búa kiểm tra trước khi chạy."
+  },
+  "42": {
+    "question": "Kiểm tra hằng ngày là việc mỗi tháng một lần nhờ thợ sửa ô tô kiểm tra.",
+    "answer": "Sai (×).",
+    "explanation": "Kiểm tra hằng ngày do người sử dụng hoặc người lái tự kiểm tra trước khi chạy."
+  },
+  "43": {
+    "question": "Khi kéo (đạp) hết phanh đỗ của ô tô bốn bánh, càng ít hành trình kéo (đạp) càng tốt.",
+    "answer": "Sai (×).",
+    "explanation": "Phải kiểm tra hành trình không quá nhiều cũng không quá ít."
+  },
+  "44": {
+    "question": "Khi vào lề đường rộng và đỗ hoặc dừng xe, phải chừa từ 0,5 mét trở lên ở phía trái của đường.",
+    "answer": "Sai (×).",
+    "explanation": "Phải chừa từ 0,75 mét trở lên."
+  },
+  "45": {
+    "question": "Như trong hình này, ý nghĩa hiệu lệnh tay của cảnh sát đối với hướng giao thông theo mũi tên ở cả hai hình là như nhau.",
+    "answer": "Đúng (○).",
+    "explanation": "Cả hai đều mang ý nghĩa đèn đỏ đối với hướng mũi tên."
+  },
+  "46": {
+    "question": "Ký hiệu này chỉ 'có vòng xoay'.",
+    "answer": "Sai (×).",
+    "explanation": "Đây là ký hiệu 'cách rẽ phải'."
+  },
+  "47": {
+    "question": "Khi chở hai người trên xe mô tô hai bánh, nên chọn loại xe có chỗ ngồi phía sau rộng rãi.",
+    "answer": "Đúng (○).",
+    "explanation": "Nên chọn xe có yên sau đủ rộng."
+  },
+  "48": {
+    "question": "Nếu có hai làn xe cùng chiều và không có biển báo hoặc ký hiệu chỉ phần đường, thì ô tô thường và mô tô đi làn bên phải, còn các xe khác phải đi làn bên trái.",
+    "answer": "Sai (×).",
+    "explanation": "Phải để trống làn phải cho việc vượt xe, và đi ở làn bên trái."
+  },
+  "49": {
+    "question": "Nhãn xác nhận xe bị bỏ mặc (sticker) có thể bị gỡ bỏ bởi người sử dụng xe, người lái xe hoặc người chịu trách nhiệm quản lý xe đó.",
+    "answer": "Đúng (○).",
+    "explanation": "Người liên quan của chiếc xe được dán có thể gỡ bỏ."
+  },
+  "50": {
+    "question": "Như trong hình này, xe A đang đỗ thì từ 9 giờ sáng đến 3 giờ chiều sẽ không bị coi là vi phạm đỗ xe.",
+    "answer": "Đúng (○).",
+    "explanation": "Đoạn này là cấm đỗ, nhưng từ vị trí biển trở đi được phép đỗ trong khoảng 9-15 giờ."
+  }
+}

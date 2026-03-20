@@ -52,8 +52,15 @@ async function loadTranslations(test: number): Promise<TranslationMap> {
   ];
 
   for (const url of urls) {
-    const res = await fetch(url);
-    if (res.ok) return await res.json() as TranslationMap;
+    try {
+      const res = await fetch(url);
+      if (!res.ok) continue;
+      const contentType = res.headers.get('content-type') ?? '';
+      if (!contentType.includes('application/json')) continue;
+      return await res.json() as TranslationMap;
+    } catch {
+      continue;
+    }
   }
 
   throw new Error('Chua co file dich cho de nay.');
@@ -328,7 +335,7 @@ export default function App() {
                 Dang tai ban dich…
               </>
             ) : (
-              <>Hien ban dich</>
+              <>Translate & Explain</>
             )}
           </button>
 

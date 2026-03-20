@@ -106,6 +106,12 @@ export default function App() {
     setIndex(i => Math.max(0, Math.min(deck.length - 1, i + dir)));
   };
 
+
+  const flip = () => {
+    setFlipped(f => !f);
+    setImgError(false);
+  };
+
   useEffect(() => {
     if (!mode) return;
     const onKeyDown = (e: KeyboardEvent) => {
@@ -121,16 +127,15 @@ export default function App() {
         e.preventDefault();
         navigate(1);
       }
+      if (e.key === ' ' || e.code === 'Space') {
+        e.preventDefault();
+        flip();
+      }
     };
 
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
-  }, [mode, navigate]);
-
-  const flip = () => {
-    setFlipped(f => !f);
-    setImgError(false);
-  };
+  }, [mode, navigate, flip]);
 
   const reset = () => { setMode(null); setSelectedTest(null); };
 

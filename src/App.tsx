@@ -84,6 +84,7 @@ export default function App() {
     setTranslationError(null);
   }, [index, flipped]);
 
+
   const startMode = useCallback((m: Mode, test?: number) => {
     const d =
       m === 'all-random' ? buildAllRandom() :
@@ -104,6 +105,27 @@ export default function App() {
     setImgError(false);
     setIndex(i => Math.max(0, Math.min(deck.length - 1, i + dir)));
   };
+
+  useEffect(() => {
+    if (!mode) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement | null;
+      const tag = target?.tagName?.toLowerCase();
+      if (tag === 'input' || tag === 'textarea' || tag === 'select' || target?.isContentEditable) return;
+
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        navigate(-1);
+      }
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        navigate(1);
+      }
+    };
+
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [mode, navigate]);
 
   const flip = () => {
     setFlipped(f => !f);

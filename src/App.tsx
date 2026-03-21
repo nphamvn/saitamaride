@@ -2,7 +2,7 @@ import { useState, useCallback, useRef, useEffect } from 'react';
 
 const TESTS = [1, 2, 3, 4, 5] as const;
 const QUESTIONS_PER_TEST = 100;
-const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/nphamvn/saitamaride/main/public';
+const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/nphamvn/saitamaride/main/';
 
 type Mode = 'all-random' | 'test-sorted' | 'test-random';
 

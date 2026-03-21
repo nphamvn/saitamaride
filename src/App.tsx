@@ -2,6 +2,7 @@ import { useState, useCallback, useRef, useEffect } from 'react';
 
 const TESTS = [1, 2, 3, 4, 5] as const;
 const QUESTIONS_PER_TEST = 100;
+const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/nphamvn/saitamaride/main/public';
 
 type Mode = 'all-random' | 'test-sorted' | 'test-random';
 
@@ -42,13 +43,13 @@ function buildAllRandom(): Card[] {
 }
 
 function imgPath(test: number, no: number, side: 'question' | 'answer'): string {
-  return `/data/${test}/${no}/${side === 'question' ? 'q' : 'a'}.png`;
+  return `${GITHUB_RAW_BASE}/data/${test}/${no}/${side === 'question' ? 'q' : 'a'}.png`;
 }
 
 async function loadTranslations(test: number): Promise<TranslationMap> {
   const urls = [
-    `/data/${test}/translations_codex.json`,
-    `/data/${test}/translations.json`,
+    `${GITHUB_RAW_BASE}/data/${test}/translations_codex.json`,
+    `${GITHUB_RAW_BASE}/data/${test}/translations.json`,
   ];
 
   for (const url of urls) {
